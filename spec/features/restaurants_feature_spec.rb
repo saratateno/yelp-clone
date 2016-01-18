@@ -17,7 +17,7 @@ feature 'restaurants' do
     scenario 'display restaurants' do
       visit '/restaurants'
       expect(page).to have_content('KFC')
-      expect(page).not_to_have_content('No restaurants yet')
+      expect(page).not_to have_content('No restaurants yet')
     end
   end
 end
