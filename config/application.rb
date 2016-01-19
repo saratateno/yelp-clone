@@ -9,6 +9,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
+require "devise"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -31,5 +32,10 @@ module YelpClone
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # If you are deploying on Heroku with Rails 3.2 only, you may want to set:
+    # config.assets.initialize_on_precompile = false
+    # This forces your application to not access the DB
+    #  or load models when precompiling your assets.
   end
 end
