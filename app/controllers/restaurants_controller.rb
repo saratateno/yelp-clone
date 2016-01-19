@@ -12,7 +12,6 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurants_path
     else
-      p params
       render 'new'
     end
   end
